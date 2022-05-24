@@ -1,0 +1,22 @@
+
+<div class="sign-in clearfix">
+    <h2>{{'Sign In' | translate}}</h2>
+    <form novalidate [formGroup]="signInForm">
+        <div class="form-group">
+            <label for="username">Username</label> 
+            <input type="text" formControlName="username" name="username" class="form-control">
+            <div class="red" *ngIf="signInForm.get('username')?.hasError('required') && signInForm.get('username')?.touched">Username is required.</div>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label> 
+            <input type="password" formControlName="password" name="password" class="form-control">
+            <div class="red" *ngIf="signInForm.get('password')?.hasError('required') && signInForm.get('password')?.touched">Password is required.</div>
+        </div>
+        <div class="form-group">
+            <button [disabled]="signInForm.invalid || formBeingSubmitted || loginSuccessful" (click)="signIn()">Sign In</button>
+        </div>
+        <div class="red" *ngIf="loginUnsuccessful">Invalid username or password.</div>
+    </form>
+    <img *ngIf="formBeingSubmitted" src="assets/gifs/loader-sand-clock.gif" width="50">
+</div>
+    

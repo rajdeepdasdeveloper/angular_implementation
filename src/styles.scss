@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    padding: 0;
+    margin: 0;
+}
+.clearfix::before{
+    content: "";
+    clear:both;
+    display: block;
+}
+.clearfix::after{
+    content: "";
+    clear:both;
+    display: block;
+}
+main{
+    min-height : calc(100vh - (70px + 60px));
+    overflow: auto;
+}
+label{
+    font-weight: bold;
+    padding:0 0 5px 0;
+    display: block;
+}
+form {
+    padding: 15px;
+}
+.form-group{
+    margin-bottom: 15px;
+    display: block;
+}
+.form-control{
+    padding: 5px;
+    display: block;
+}
+.red {
+    color: red !important;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: "Helvetica Neue", sans-serif; }
