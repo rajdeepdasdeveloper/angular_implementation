@@ -4,10 +4,20 @@
     box-sizing: border-box;
 }
 
+.fade-in {
+    animation: fade_in .3s linear;
+}
+@keyframes fade_in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 html, body{
     padding: 0;
     margin: 0;
+    height: 100%;
 }
+body { margin: 0; font-family: "Helvetica Neue", sans-serif; }
 .clearfix::before{
     content: "";
     clear:both;
@@ -18,9 +28,19 @@ html, body{
     clear:both;
     display: block;
 }
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
 main{
     min-height : calc(100vh - (70px + 60px));
-    overflow: auto;
+    position: relative;
+    padding-top: 1px;
 }
 label{
     font-weight: bold;
@@ -33,14 +53,23 @@ form {
 .form-group{
     margin-bottom: 15px;
     display: block;
+    position: relative;
+    button{
+        font-weight: bold;
+    }
 }
 .form-control{
-    padding: 5px;
+    padding: 7px 5px;
     display: block;
+    width: 100%;
+    font-size: 18px;
+    margin-bottom: 4px;
+    border: 1px solid #c1c1c1;
+    border-radius: 4px;
 }
 .red {
     color: red !important;
+    border-color: red;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: "Helvetica Neue", sans-serif; }
+

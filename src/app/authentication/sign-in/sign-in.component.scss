@@ -1,0 +1,38 @@
+.sign-in{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    .sign-in-wrapper{
+        padding: 15px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 400px;
+        width: 100%;
+        .show-hide{
+            position: absolute;
+            top: 29px;
+            right: 10px;
+            background-color: transparent;
+            border: none !important;
+            cursor: pointer;
+        }
+        .sign-in-loader-wrapper{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: white;
+            .sign-in-loader{
+                position: absolute;
+                width: 100%;
+                top: 50%;
+                transform: translate(0%, -50%);
+            }
+        }
+    }
+}

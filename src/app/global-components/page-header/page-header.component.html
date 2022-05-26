@@ -1,14 +1,14 @@
 <div class="header-inner-wrapper clearfix">
     <div class="logo">
         <a>
-            <img src="assets/icons/icon-72x72.png" alt="{{ applicationName }}" height="40">
+            <img src="assets/icons/angular-icon-logo.svg" alt="{{ applicationName }}" height="40">
         </a>
     </div>
     <div class="logout" *ngIf="showLogOutButton">
-        <button (click)="logout()">Logout</button>
+        <button (click)="logout()">{{ 'log_out' | translate }}</button>
     </div>
     <div class="select-lang">
-        <label>Select Language </label>
+        <label>{{ 'select_language' | translate }} </label>
         <select (change)="onLangChange($event)">
             <option value="en" [selected]="selectedLanguage == 'en'">English</option>
             <option value="hi" [selected]="selectedLanguage == 'hi'">हिंदी</option>
