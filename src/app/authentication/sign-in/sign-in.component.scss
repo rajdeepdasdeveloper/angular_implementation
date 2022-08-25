@@ -4,6 +4,13 @@
     left: 0;
     height: 100%;
     width: 100%;
+    background-color: #fff;
+    .logo{
+        img{
+            width: 75px;
+            height: auto;
+        }
+    }
     .sign-in-wrapper{
         padding: 15px;
         position: absolute;
@@ -12,13 +19,30 @@
         transform: translate(-50%, -50%);
         max-width: 400px;
         width: 100%;
+        h2{
+            font-size: 25px;
+            font-weight: bold;
+        }
         .show-hide{
             position: absolute;
-            top: 29px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            top: 50%;
             right: 10px;
+            transform: translate(0%, -50%);
             background-color: transparent;
             border: none !important;
             cursor: pointer;
+            span{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            img{
+                display: block;
+            }
         }
         .sign-in-loader-wrapper{
             position: absolute;

@@ -11,6 +11,8 @@
     "username_is_required" : "ব্যবহারকারীর নাম প্রয়োজন|",
     "password_is_required" : "পাসওয়ার্ড প্রয়োজন|",
     "invalid_username_or_password" : "ব্যবহারকারীর নাম বা পাসওয়ার্ড অবৈধ|",
-    "log_out": "প্রস্থান"
+    "log_out": "প্রস্থান",
+    "cancel": "বাতিল করুন",
+    "are_you_sure_you_want_to_log_out?": "আপনি কি নিশ্চিত যে আপনি প্রস্থান করতে চান?"
 }
 

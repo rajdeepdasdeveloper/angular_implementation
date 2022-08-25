@@ -11,5 +11,7 @@
     "username_is_required" : "Username is required.",
     "password_is_required" : "Password is required.",
     "invalid_username_or_password" : "Invalid username or password.",
-    "log_out": "Logout"
+    "log_out": "Logout",
+    "cancel": "Cancel",
+    "are_you_sure_you_want_to_log_out?": "Are you sure you want to log out?"
 }

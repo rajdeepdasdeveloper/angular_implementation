@@ -6,8 +6,8 @@ import { StorageService } from '../services/storage.service';
 import { HttpClient } from '@angular/common/http';
 import { HttpLoaderFactory } from '../app.module';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-
-
+import { AngularMaterialModule } from './angular-material/angular-material.module';
+import { ToggleMenuService } from '../services/toggle-menu/toggle-menu.service';
 
 @NgModule({
   declarations: [
@@ -16,6 +16,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
   ],
   imports: [
     CommonModule,
+    AngularMaterialModule,
     TranslateModule.forChild({
       loader: {
         provide: TranslateLoader,
@@ -26,10 +27,12 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
   ],
   exports: [
     PageHeaderComponent,
-    PageFooterComponent
+    PageFooterComponent,
+    AngularMaterialModule
   ],
   providers: [
-    StorageService
+    StorageService,
+    ToggleMenuService
   ]
 })
 export class GlobalModule { }

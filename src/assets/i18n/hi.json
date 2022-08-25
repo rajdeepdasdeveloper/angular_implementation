@@ -10,6 +10,8 @@
     "authenticating": "प्रमाणीकरण जारी है",
     "username_is_required" : "उपयोगकर्ता नाम आवश्यक है|",
     "password_is_required" : "पासवर्ड आवश्यक है|",
-    "invalid_username_or_password" : "ব্যবহারকারীর নাম বা পাসওয়ার্ড অবৈধ|",
-    "log_out": "प्रस्थान"
+    "invalid_username_or_password" : "उपयोगकर्ता नाम या पासवर्ड अमान्य|",
+    "log_out": "प्रस्थान",
+    "cancel": "रद्द करें",
+    "are_you_sure_you_want_to_log_out?": "क्या आप वाकई प्रस्थान करना चाहते हैं?"
 }

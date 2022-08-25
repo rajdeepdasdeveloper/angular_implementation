@@ -1,13 +1,35 @@
-<!-- {{ 'title' | translate }} -->
 <header id="header" clas="page-header clearfix">
   <app-page-header></app-page-header>
 </header>
 <main id="main" class="main-content clearfix">
-  <router-outlet></router-outlet>
+  <mat-drawer-container class="drawer-container" autosize>
+    <mat-drawer #drawer class="sidenav" mode="side">
+      <mat-nav-list>
+        <a [routerLink]="'/'"><mat-list-item><mat-icon>home</mat-icon> <span>Home</span></mat-list-item></a>
+        <mat-divider></mat-divider>
+        <a [routerLink]="'/about'"><mat-list-item><mat-icon>description</mat-icon> <span>About</span></mat-list-item></a>
+        <mat-divider></mat-divider>
+      </mat-nav-list>
+      <!-- <ul>
+        <li></li>
+        <li></li>
+      </ul> -->
+      <!-- <button type="button" mat-button (click)="drawer.toggle()">
+        Toggle sidenav
+      </button> -->
+    </mat-drawer>
+
+    <div class="sidenav-content">
+        <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-container>
 </main>
-<header id="footer" clas="page-footer clearfix">
+<footer id="footer" clas="page-footer clearfix">
   <app-page-footer></app-page-footer>
-</header>
+</footer>
+
+
+
 
 
 

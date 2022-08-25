@@ -2,19 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules, NoPreloading } from '@angular/router';
 import { PageNotFoundComponent } from '../app/global-components/page-not-found/page-not-found.component';
 import { TermsPolicyComponent } from './global-components/terms-policy/terms-policy.component';
-import { CanActivateGuardService } from './services/can-activate-guard/can-activate-guard.service';
 import { AuthGuard } from './services/auth-guard/auth-guard.service';
 import { ClientGuardService } from './services/client-guard/client-guardu.service';
-// import { CustomPreloadingService } from './global_services/custom-preloading/custom-preloading.service';
-// import { RouteResolverService } from './global_services/route-resolver/route-resolver.service';
-// import { CanActivateGuardService } from './global_services/can-activate-guard/can-activate-guard.service';
-// import { TestComponent } from './global_components/test/test.component';
-// import { CanLoadGuardService } from './global_services/can-load-guard/can-load-guard.service';
-// import { TestChildComponent } from './global_components/test-child/test-child.component';
-// import { CanActivateChildGuardService } from './global_services/can-activate-child-guard/can-activate-child-guard.service';
-// import { CanDeactivateGuardService } from './global_services/can-deactivate-guard/can-deactivate-guard.service';
-// import { ParametersComponent } from './global_components/parameters/parameters.component';
-// import { HeirComponent } from './global_components/heir/heir.component';
 
 const routes: Routes = [
 //   { path: 'home', component: HomeComponent,
@@ -60,7 +49,7 @@ const routes: Routes = [
   }, 
   { path: 'terms-policy', component: TermsPolicyComponent },
   { path: '', 
-    loadChildren: () => import('./pages/pages.module').then(mod=>mod.PagesModule),
+    loadChildren: () => import('./modules/home/home.module').then(mod=>mod.HomeModule),
     canLoad: [AuthGuard] 
   },
   { path: '**', component: PageNotFoundComponent },

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules, NoPreloading } from '@angular/router';
-import { AboutComponent } from './about/about.component';
-import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './components/about/about.component';
+import { HomeComponent } from './components/home/home.component';
 // import { CustomPreloadingService } from './global_services/custom-preloading/custom-preloading.service';
 // import { RouteResolverService } from './global_services/route-resolver/route-resolver.service';
 // import { CanActivateGuardService } from './global_services/can-activate-guard/can-activate-guard.service';

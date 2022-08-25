@@ -5,6 +5,14 @@
 }
 .logo{
     float: left;
+    @media only screen and (max-width: 767px) {
+        height: 25px;
+    }
+    img{
+        display: block;
+        width: auto;
+        max-height: 100%;
+    }
 }
 .select-lang{
     float: right;
@@ -13,18 +21,18 @@
     margin-top: 5px;
     label{
         display: inline-block;
+        @media only screen and (max-width: 400px)  {
+            display: none;
+        }
     }
     select{
         margin-left: 10px;
         padding: 5px 10px;
     }
 }
-.logout{
-    float: right;
-    margin-top: 5px;
-    button{
-        margin-left: 10px;
-        padding: 5px 10px;
-        font-weight: bold;
-    }
+.mainMenuButton{
+    margin-left: 5px;
+}
+.sideMenuButton{
+    margin-right: 15px;
 }

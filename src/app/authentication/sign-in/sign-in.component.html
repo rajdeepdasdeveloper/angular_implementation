@@ -1,6 +1,8 @@
-
 <div class="sign-in clearfix">
     <div class="sign-in-wrapper">
+        <div class="logo text-center fade-in">
+            <img src="assets/icons/angular-icon-logo.svg" alt="Application" height="100">
+        </div>
         <h2 *ngIf="!formBeingSubmitted" class="text-center fade-in">{{'sign_in_title' | translate}}</h2>
         <form *ngIf="!formBeingSubmitted" novalidate [formGroup]="signInForm" class="fade-in">
             <div class="form-group">
@@ -10,24 +12,32 @@
             </div>
             <div class="form-group">
                 <label for="password">{{ 'password' | translate }} <span class="red">*</span></label> 
-                <input type="{{showPassword ? 'text' : 'password'}}" formControlName="password" name="password" class="form-control" [class]="signInForm.get('password')?.hasError('required') && signInForm.get('password')?.touched ? 'red' : ''">
-                <span (click)="toggleShowHidePassword()"class="show-hide">
-                    <img *ngIf="!showPassword" src="assets/icons/eye.svg" width="25">
-                    <img *ngIf="showPassword" src="assets/icons/eye-cut.svg" width="25">
-                </span>
+                <div class="relative">
+                    <input type="{{showPassword ? 'text' : 'password'}}" formControlName="password" name="password" class="form-control password" [class]="signInForm.get('password')?.hasError('required') && signInForm.get('password')?.touched ? 'red' : ''">
+                    <span matRipple (click)="toggleShowHidePassword()"class="show-hide">
+                        <span [hidden]="showPassword">
+                            <img src="assets/icons/eye.svg" width="25">
+                        </span>
+                        <span [hidden]="!showPassword">
+                            <img src="assets/icons/eye-cut.svg" width="25">
+                        </span>
+                    </span>
+                </div>
                 <div class="red" *ngIf="signInForm.get('password')?.hasError('required') && signInForm.get('password')?.touched">{{'password_is_required' | translate}}</div>
             </div>
             <div class="form-group">
-                <button class="form-control" [disabled]="signInForm.invalid || formBeingSubmitted || loginSuccessful" (click)="signIn()">{{ 'sign_in' | translate }}</button>
+                <button mat-raised-button color="primary" class="form-control" [disabled]="signInForm.invalid || formBeingSubmitted || loginSuccessful" (click)="signIn()">{{ 'sign_in' | translate }}</button>
             </div>
             <div class="red" *ngIf="loginUnsuccessful && signInForm.pristine">{{ 'invalid_username_or_password' | translate }}</div>
         </form>
-        <div *ngIf="formBeingSubmitted" class="sign-in-loader-wrapper fade-in">
+        <div [hidden]="!formBeingSubmitted" class="sign-in-loader-wrapper fade-in">
             <div class="sign-in-loader text-center">
                 <img src="assets/gifs/loader-sand-clock.gif" width="50">
-                <h4>{{ 'authenticating' | translate }}...</h4>
+                <h4><b>{{ 'authenticating' | translate }}<br>...</b></h4>
             </div>
         </div>
     </div>
 </div>
+
+
     
