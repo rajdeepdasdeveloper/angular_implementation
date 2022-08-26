@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules, NoPreloading } from '@angular/router';
-import { SignUpComponent } from './sign-up.component';
+import { SignUpComponent } from '../../components/sign-up/sign-up.component';
 // import { HomeComponent } from '../app/global-components/home/home.component';
 // import { PageNotFoundComponent } from '../app/global-components/page-not-found/page-not-found.component';
 // import { CustomPreloadingService } from './global_services/custom-preloading/custom-preloading.service';

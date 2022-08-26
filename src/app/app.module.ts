@@ -8,7 +8,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { GlobalModule } from './shared/global.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DialogContentExampleDialog } from './global-components/page-header/page-header.component';
+import { DialogContentExampleDialog } from './components/page-header/page-header.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {

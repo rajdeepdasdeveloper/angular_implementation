@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules, NoPreloading } from '@angular/router';
-import { PageNotFoundComponent } from '../app/global-components/page-not-found/page-not-found.component';
-import { TermsPolicyComponent } from './global-components/terms-policy/terms-policy.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { TermsPolicyComponent } from './components/terms-policy/terms-policy.component';
 import { AuthGuard } from './services/auth-guard/auth-guard.service';
 import { ClientGuardService } from './services/client-guard/client-guardu.service';
 
@@ -40,11 +40,11 @@ const routes: Routes = [
 //     canLoad: [CanLoadGuardService]
 //   }, 
   { path: 'signup', 
-    loadChildren: () => import('./authentication/sign-up/sign-up.module').then(mod=>mod.SignUpModule),
+    loadChildren: () => import('./modules/sign-up/sign-up.module').then(mod=>mod.SignUpModule),
     canLoad: [ClientGuardService] 
   }, 
   { path: 'signin', 
-    loadChildren: () => import('./authentication/sign-in/sign-in.module').then(mod=>mod.SignInModule), 
+    loadChildren: () => import('./modules/sign-in/sign-in.module').then(mod=>mod.SignInModule), 
     canLoad: [ClientGuardService] 
   }, 
   { path: 'terms-policy', component: TermsPolicyComponent },

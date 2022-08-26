@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PageHeaderComponent } from '../global-components/page-header/page-header.component';
-import { PageFooterComponent } from '../global-components/page-footer/page-footer.component';
+import { PageHeaderComponent } from '../components/page-header/page-header.component';
+import { PageFooterComponent } from '../components/page-footer/page-footer.component';
 import { StorageService } from '../services/storage.service';
 import { HttpClient } from '@angular/common/http';
 import { HttpLoaderFactory } from '../app.module';
