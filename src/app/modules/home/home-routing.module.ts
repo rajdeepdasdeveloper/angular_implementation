@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules, NoPreloading } from '@angular/router';
+import { PageNotFoundComponent } from '../../components/page-not-found/page-not-found.component';
+import { ClientGuardService } from '../../services/client-guard/client-guardu.service';
 import { AboutComponent } from '../../components/about/about.component';
 import { HomeComponent } from '../../components/home/home.component';
 // import { CustomPreloadingService } from './global_services/custom-preloading/custom-preloading.service';
@@ -15,10 +17,10 @@ import { HomeComponent } from '../../components/home/home.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent,
-    canDeactivate: []
+    canLoad: [ClientGuardService], canDeactivate: []
   },
   { path: 'about', component: AboutComponent,
-    canDeactivate: []
+    canLoad: [ClientGuardService], canDeactivate: []
   },
 //   { path: 'test', 
 //     component: TestComponent, 
@@ -53,7 +55,7 @@ const routes: Routes = [
   // { path: 'signup', loadChildren: () => import('./authentication/sign-up/sign-up.module').then(mod=>mod.SignUpModule) }, 
   // { path: 'signin', loadChildren: () => import('./authentication/sign-in/sign-in.module').then(mod=>mod.SignInModule) }, 
   // { path: '', redirectTo: '/sign-up', pathMatch: 'full' },
-  // { path: '**', component: PageNotFoundComponent },
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({

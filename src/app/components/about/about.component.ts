@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from 'src/app/services/http/http.service';
 
 @Component({
   selector: 'app-about',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http : HttpService) { }
 
   ngOnInit(): void {
+    this.http.httpRequest('POST', "http://localhost:3000/status", {}).subscribe(response => {
+      console.log(response);
+    }, err => {
+      console.log(err);
+    });
+
   }
 
 }
